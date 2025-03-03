@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Целевая страница</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-white">
+
+<!-- Заголовок -->
+<header>
+    <nav class="bg-blue-500 p-4">
+        <div class="flex justify-between items-center">
+            <div class="text-white text-2xl font-bold">AQUABIOS</div>
+            <div class="hidden md:flex space-x-6">
+                <a href="#" class="text-white hover:text-gray-300">Главная страница</a>
+                <a href="#about" class="text-white hover:text-gray-300">О программе</a>
+                <a href="#services" class="text-white hover:text-gray-300">Услуги</a>
+                <a href="#contact" class="text-white hover:text-gray-300">Контакты</a>
+            </div>
+            <div class="md:hidden">
+                <button id="hamburger" class="text-white focus:outline-none">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" class="w-6 h-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <div id="mobile-menu" class="md:hidden hidden space-y-4 mt-4">
+            <a href="#" class="text-white hover:text-gray-300">Главная страница</a>
+            <a href="#about" class="text-white hover:text-gray-300">О программе</a>
+            <a href="#services" class="text-white hover:text-gray-300">Услуги</a>
+            <a href="#contact" class="text-white hover:text-gray-300">Контакты</a>
+        </div>
+    </nav>
+</header>
+
+<!-- Основной раздел -->
+<section class="text-center py-20 bg-gradient-to-r from-blue-500 via-indigo-500 to-purple-500 text-white">
+    <h1 class="text-4xl font-extrabold mb-4">Услуга по замене фильтров</h1>
+    <p class="text-lg mb-8">Мы предлагаем вам лучший сервис, который изменит вашу жизнь!</p>
+    <a href="#contact" class="bg-blue-500 hover:bg-blue-700 text-white font-semibold py-2 px-6 rounded-lg transition-colors duration-300">Связаться с нами</a>
+</section>
+
+<!-- Раздел услуг -->
+<section id="services" class="py-16 px-4 bg-gray-100">
+    <h2 class="text-3xl text-center bg-black font-bold mb-8">Наши услуги по замене фильтров воды</h2>
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <!-- Карточка 1: Замена фильтра воды -->
+        <div class="bg-gradient-to-r from-blue-400 via-teal-500 to-green-500 p-6 rounded-lg shadow-lg hover:scale-105 transition-transform duration-300">
+            <div class="mb-4">
+                <i class="fas fa-tint text-4xl text-white"></i>
+            </div>
+            <h3 class="text-xl font-semibold text-white mb-2">Замена фильтра для воды</h3>
+            <p class="text-white">Мы предлагаем профессиональную замену фильтров для вашего дома или офиса. Чистая вода - залог здоровья!</p>
+        </div>
+        <!-- Карточка 2: Очистка системы -->
+        <div class="bg-gradient-to-r from-green-300 via-blue-400 to-indigo-500 p-6 rounded-lg shadow-lg hover:scale-105 transition-transform duration-300">
+            <div class="mb-4">
+                <i class="fas fa-filter text-4xl text-white"></i>
+            </div>
+            <h3 class="text-xl font-semibold text-white mb-2">Очистка системы водоснабжения</h3>
+            <p class="text-white">Очистка труб и фильтров от загрязнений для продления срока службы и улучшения качества воды.</p>
+        </div>
+        <!-- Карточка 3: Установка фильтров -->
+        <div class="bg-gradient-to-r from-teal-400 via-green-500 to-blue-600 p-6 rounded-lg shadow-lg hover:scale-105 transition-transform duration-300">
+            <div class="mb-4">
+                <i class="fas fa-cogs text-4xl text-white"></i>
+            </div>
+            <h3 class="text-xl font-semibold text-white mb-2">Установка фильтров</h3>
+            <p class="text-white">Профессиональная установка фильтров для воды в вашем доме или офисе с гарантией качества.</p>
+        </div>
+    </div>
+</section>
+
+<!-- Контактная форма -->
+<section id="contact" class="py-16 px-4">
+    <h2 class="text-3xl text-center font-bold mb-8">Контактная форма</h2>
+    <form class="max-w-lg mx-auto bg-white p-6 rounded-lg shadow-md">
+        <div class="mb-4">
+            
+            <label for="name" class="block text-gray-700">Имя</label>
+            <input type="text" id="name" class="w-full p-3 border-2 border-gray-300 text-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Введите ваше имя">
+            
+        </div>
+        <div class="mb-4">
+            <label for="email" class="block text-gray-700">Email</label>
+            <input type="email" id="email" class="w-full p-3 border-2 border-gray-300 text-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Введите ваш email">
+        </div>
+        <div class="mb-4">
+            <label for="message" class="block text-gray-700">Сообщение</label>
+            <textarea id="message" rows="4" class="w-full p-3 border-2 border-gray-300 text-gray-700 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500" placeholder="Введите ваше сообщение"></textarea>
+        </div>
+        <button type="submit" class="w-full bg-blue-500 hover:bg-blue-700 text-white py-2 px-4 rounded-lg">Отправить</button>
+    </form>
+</section>
+
+<!-- Нижний колонтитул -->
+<footer class="bg-blue-500 text-white py-6">
+    <div class="flex justify-between items-center container mx-auto px-4">
+        <p>&copy; 2025 Пример Компании. Все права защищены.</p>
+        <div class="space-x-4">
+            <a href="https://www.facebook.com" class="hover:text-gray-300">Facebook</a>
+            <a href="https://twitter.com" class="hover:text-gray-300">Twitter</a>
+            <a href="https://www.instagram.com" class="hover:text-gray-300">Instagram</a>
+        </div>
+    </div>
+</footer>
+
+<script>
+    document.getElementById("hamburger").addEventListener("click", function() {
+        const menu = document.getElementById("mobile-menu");
+        menu.classList.toggle("hidden");
+    });
+</script>
+
+</body>
+</html>
